@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <title>Final App</title>
+</head>
+
+<body>
+    <!--**********PHOTO GRID**********-->
+    <div data-role="page" id="grid">
+        <ul class="tabs">
+            <li class="tab" id="photo-icon"><a href="#grid" data-role="pagelink" class="active">Photo Grid</a>
+            </li>
+            <li class="tab" id="camera-icon"><a href="#camera" data-role="pagelink" class="">Camera</a>
+            </li>
+        </ul>
+        <div data-role="content">
+            <h3></h3>
+            <ul id="imageList" class="grid columns-4">
+            </ul>
+        </div>
+    </div>
+
+
+    <!--**********CAMERA**********-->
+    <div data-role="page" id="camera">
+        <ul class="tabs">
+            <li class="tab" id="photo-icon"><a href="#grid" data-role="pagelink" class="">Photo Grid</a>
+            </li>
+            <li class="tab" id="camera-icon"><a href="#camera" data-role="pagelink" class="active">Camera</a>
+            </li>
+        </ul>
+
+        <div data-role="content">
+            <div class="wrapper">
+                <form class="pure-form pure-form-stacked">
+                    <div class="form">
+                        <fieldset>
+                            <legend>Edit Photo</legend>
+
+                            <label for="text">Add Text</label>
+                            <input id="text" type="text" placeholder="No more than 30 characters">
+
+                            <form>
+                                <input type="radio" id="top" name="option" value="top"> Top
+                                <br>
+                                <input type="radio" id="bottom" name="option" value="bottom" checked> Bottom
+                            </form>
+                            <br/>
+
+                            <button type="set-text" id="setText" class="pure-button">Set Text</button>
+                            <button type="submit" id="savePic" class="pure-button">Save Photo</button>
+                        </fieldset>
+                    </div>
+
+                </form>
+            </div>
+            <canvas id="c"></canvas>
+            <br>
+            <canvas id="c_thumb"></canvas>
+        </div>
+    </div>
+
+
+    <!--**********MODAL**********-->
+    <div data-role="overlay">&nbsp;</div>
+
+    <div data-role="modal">
+        <div id="fullsizeModal" class="formBox">
+            <img id="fullsize" src="">
+        </div>
+        <button id="btnCancel" class="btn">Cancel</button>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>

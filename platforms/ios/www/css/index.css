@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+    max-height: 100%;
+    background-color: #4A5360;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+html,
+body {
+    max-height: 100%;
+}
+
+h2,
+h3,
+p {
+    padding: 0.2rem 2rem;
+}
+/********************************
+        TABS
+********************************/
+
+ul.tabs {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid #c9ccd1;
+}
+
+.tabs li.tab {
+    margin-top: 11px;
+    float: left;
+    display: inline-block;
+    width: 50%;
+}
+
+.tabs li.tab a {
+    display: block;
+    padding: 0.35rem 2rem;
+    font-size: 1rem;
+    line-height: 5rem;
+    height: 3rem;
+    color: #B5B8BE;
+    text-decoration: none;
+    border: none;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tabs li.tab a.active {
+    color: #FB797B;
+    background-color: #fff;
+}
+
+.tabs li.tab a:first-child {
+    border-right: 1px solid #c9ccd1;
+}
+/********************************
+        PAGES
+********************************/
+
+[data-role="page"] {
+    display: none;
+    color: #bbb;
+    width: 100%;
+}
+
+div#grid {
+    display: block;
+}
+
+[data-role="header"] {
+    background-color: #111;
+}
+
+[data-role="header"] h1 {
+    padding: 0.4rem;
+    color: #d4d4d4;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    word-spacing: 1rem;
+    font-variant: small-caps;
+}
+
+[data-role="content"] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+}
+
+[data-role="content"] p:last-child {
+    padding-bottom: 4rem;
+}
+/*************************************
+        Icons
+*************************************/
+
+#photo-icon a {
+    background: url(../img/photo.svg) no-repeat 50% 20%;
+    background-size: 32px;
+}
+
+#camera-icon a {
+    background: url(../img/camera.svg) no-repeat 50% 20%;
+    background-size: 32px;
+}
+
+#camera-icon a.active {
+    background: url(../img/camera-2.svg) no-repeat 50% 20%;
+    background-size: 32px;
+}
+
+#photo-icon a.active {
+    background: url(../img/photo-2.svg) no-repeat 50% 20%;
+    background-size: 32px;
+}
+/*************************************
+        Grid
+*************************************/
+
+ul.grid {
+    list-style: none;
+    font-size: 0px;
+    padding: 0;
+    margin: 20px 0 0 -15px;
+}
+
+ul.grid li {
+    display: inline-block;
+    padding: 10px;
+    margin: 30px 0 6% 6%;
+    /*    background: #FB797B;*/
+    
+    vertical-align: top;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/*
+ul.grid li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+*/
+/* class for 4 columns */
+
+ul.grid.columns-4 li {
+    width: 180px;
+    height: 130px;
+}
+
+.caption {
+    font-size: 15px;
+    width: 180px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+}
+/*************************************
+        Modal
+*************************************/
+
+[data-role=overlay] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.82);
+    display: none;
+}
+
+[data-role=modal] {
+    background-color: white;
+    padding: 8px;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    z-index: 15;
+    display: none;
+}
+/*************************************
+        Camera
+*************************************/
+
+.wrapper {
+    width: 100%;
+}
+
+button {
+    padding: 0.5rem 2rem;
+}
+
+#c {
+    width: 600px;
+    height: 433.333px;
+    background-color: #fff;
+    border: none;
+    margin: 130px 0 0 40px;
+}
+
+#t {
+    width: 20rem;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    margin: 1rem 2rem;
+}
+
+#c_thumb {
+    visibility: hidden;
+}
+/*************************************
+        Form
+*************************************/
+
+.form {
+    background-color: white;
+    float: right;
+    height: 100vh;
+    width: 300px;
+    padding: 20px;
+}
+
+.wrapper {
+    /*    height:100vh;*/
+}
+
+.pure-form input[type="text"],
+.pure-form select,
+.pure-form textarea {
+    padding: 0.5em 0.6em;
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pure-form input[type="text"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
+    outline: 0;
+    border-color: #B5B8BE;
+}
+
+.pure-form label {
+    margin: 0.5em 0 0.2em;
+}
+
+.pure-form fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+}
+
+.pure-form legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.pure-form-stacked input[type="text"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
+    display: block;
+    margin: 0.25em 0;
+}
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+
+.pure-form-stacked input:not([type]) {
+    display: block;
+    margin: 0.25em 0;
+}
+
+#text {
+    font-size: 15px;
+    padding: 10px 20px 10px 10px;
+    margin: 0 0 20px;
+}
+
+#top,
+#bottom,
+#setText,
+#savePic {
+    margin-bottom: 20px;
+}
+
+#setText,
+#savePic {
+    width: 100%;
+    border: none;
+}
+
+#setText,
+#savePic {
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 15px;
+    background: #FB797B;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+#setText:hover,
+#savePic:hover {
+    background: #FF888E;
+    text-decoration: none;
+}
+
+input[type=radio] {
+    background-color: #4A5360;
+    border: none;
+}
+
+.btn {
+    font-size: 15px;
+    width: 600px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    margin-top: 2px;
+}

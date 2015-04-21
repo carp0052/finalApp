@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="ca.edumedia.carp0052.finalApp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>carp0052 Final App</name>
+    <description>
+        Photo App
+    </description>
+    <author email="carp0052@algonquinlive.com" href="http://github.com/carp0052">
+        Team Kari and Sara
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
